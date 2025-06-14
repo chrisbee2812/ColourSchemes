@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colour Scheme Generator</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <header>
+                <div id="seed-colour" class="seed-colour">                    
+                    <label for="seed-colour-input">Seed Colour</label>
+                    <input type="color" id="seed-colour-input" class="seed-colour-input" value="#ff0000">
+                </div>
+                <div id="colour-scheme" class="colour-scheme">
+                    <label for="colour-scheme-list">Colour Scheme</label>
+                    <select id="colour-scheme-list" class="colour-scheme-list">
+                        <option value="monochrome">Monochrome</option>
+                        <option value="monochrome-dark">Monochrome-Dark</option>
+                        <option value="monochrome-light">Monochrome-Light</option>
+                        <option value="analogic">Analogic</option>
+                        <option value="complement">Complement</option>
+                        <option value="analogic-complement">Analogic-Complement</option>
+                        <option value="triad">Triad</option>
+                        <option value="quad">Quad</option>
+                    </select>
+                </div>
+                <div id="return-colours-number-div" class="return-colours-number-div">
+                    <label for="retun-colours-number">No. Colours (max 8)</label>
+                    <input type="number" id="return-colours-number" class="return-colours-number" value="5" min="2" max="8">
+                </div>
+                <div id="colour-scheme-button" class="colour-scheme-button">
+                    <button id="generate-colour-scheme" class="generate-colour-scheme">Get Colour<br>Scheme</button>
+                </div>               
+            </header>
+            <div id="colour-scheme-output" class="colour-scheme-output">
+                <div id="colour-scheme-output-colours" class="colour-scheme-output-colours"></div>
+                    <!-- Colour boxes will be generated here -->
+                <p id="colour-scheme-output-text" class="colour-scheme-output-text">#ff0000</p>
+            </div>            
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>

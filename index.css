@@ -28,7 +28,7 @@ header,
 header {
     justify-content: center;
     padding: 1em;
-    background-color: #f0f0f0;
+    background-color: #7170EF;
     border-bottom: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     gap: 2em;
@@ -56,18 +56,20 @@ header {
 }
 .generate-colour-scheme {
     background-color: #fff;
-    height: 3.5em;    
+    height: 3.5em;  
+    padding: 0 1em;  
 }
 
 .generate-colour-scheme:hover {
-    background-color: lightcyan;
+    background-color: #C6C5F9;
     cursor: pointer;
 }
 
 .colour-scheme-output-colours {
-    width: 100%;
+    
     height: 20em;
-    background-color: #ff0000;
+    background-color: #F8ADFA;
+        
 }
 
 .colour-scheme-output-text {
@@ -78,4 +80,39 @@ header {
     height: 1.3em;
     width: 2em;
     text-align: center;
+}
+
+.colour-scheme-output {
+    display: grid;
+    grid-template-columns: repeat(1, auto); 
+}
+
+.colour-scheme-output-3 {
+    display: grid;
+    grid-template-columns: repeat(3, auto); 
+}
+
+.colour-scheme-output-4 {
+    display: grid;
+    grid-template-columns: repeat(4, auto); 
+}
+
+.colour-scheme-output-5 {
+    display: grid;
+    grid-template-columns: repeat(5, auto); 
+}
+
+.colour-scheme-output-6 {
+    display: grid;
+    grid-template-columns: repeat(6, auto); 
+}
+
+.colour-scheme-output-7 {
+    display: grid;
+    grid-template-columns: repeat(7, auto); 
+}
+
+.colour-scheme-output-8 {
+    display: grid;
+    grid-template-columns: repeat(8, auto); 
 }

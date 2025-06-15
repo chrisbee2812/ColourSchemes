@@ -1,5 +1,22 @@
 const button = document.getElementById('generate-colour-scheme');
 const modeType = document.getElementById('colour-scheme-list');
+const clickDetect = document.querySelector('#colour-scheme-output');
+
+clickDetect.addEventListener('click', (event) => {
+    if (event.target.classList.contains('colour-scheme-output-colours')) {
+        const colourId = event.target.id;
+        const textId = colourId.replace('-colo', '-text');
+        const textElement = document.getElementById(textId);
+        navigator.clipboard.writeText(textElement.textContent)
+            .then(() => {
+                alert(`Copied ${textElement.textContent} to clipboard`);
+            })
+            .catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+}
+})
+
 
 modeType.addEventListener('change', () => {
     const mode = document.getElementById('colour-scheme-list').value;
@@ -28,8 +45,8 @@ button.addEventListener('click', () => {
             const colors = data.colors.map(color => color.hex.value);
             console.log(colors);
             const htmlReturn = colors.map(color => {
-                return `<div><div id="colour-scheme-output-${color}" class="colour-scheme-output-colours" style="background-color:${color}"></div>                   
-                <p id="colour-scheme-output-${color}-text" class="colour-scheme-output-text">${color}</p></div>`;
+                return `<div><div id="${color}-colo" class="colour-scheme-output-colours" style="background-color:${color}"></div>                   
+                <p id="${color}-text" class="colour-scheme-output-text">${color}</p></div>`;
             }).join('');
             document.getElementById('colour-scheme-output').innerHTML = htmlReturn;
             colourOutputRender();
